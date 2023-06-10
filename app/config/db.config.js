@@ -9,13 +9,13 @@ module.exports = {
     // PASSWORD: "K7b8sGbpCT",
     // DB: "classat1_manage_acc"
 
-    // HOST: "sql.freedb.tech",
-    // USER: "freedb_electric",
-    // PASSWORD: "t2*tVf92t&2AEZv",
-    // DB: "freedb_electric_system"
+    HOST: "sql.freedb.tech",
+    USER: "freedb_electric",
+    PASSWORD: "t2*tVf92t&2AEZv",
+    DB: "freedb_electric_system"
 
-    HOST: "aws.connect.psdb.cloud",
-    USER: "hcvezh6lizmuval1kov2",
-    PASSWORD: "pscale_pw_gOtUjq3Ypa4sBPhJ0Gm0wDZoJtAVwRXym9nJ260Cgbf",
-    DB: "manage_account"
+    // HOST: "aws.connect.psdb.cloud",
+    // USER: "nokr12jjc7cznvlbd8nz",
+    // PASSWORD: "pscale_pw_WafGlsprkcZXRlMBzvZHDto8IlaeFE6G24goAw6uTBb",
+    // DB: "manage_account"
   };
