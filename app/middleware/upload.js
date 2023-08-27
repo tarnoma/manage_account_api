@@ -16,7 +16,8 @@ const storage = multer.diskStorage({
 });
 
 //"singlefile" is an element name in the multipart/form-data
-const uploadFile = multer({ storage: storage }).single("singlefile");
+// const uploadFile = multer({ storage: storage }).single("singlefile");
+const uploadFile = multer({  dest: __basedir + "/assets/uploads/" }).single("singlefile");
 
 //util.promisify() makes the exported middleware object can be used with async-await
 const uploadFileMiddleware = util.promisify(uploadFile);
