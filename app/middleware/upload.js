@@ -5,7 +5,7 @@ const storage = multer.diskStorage({
     // for local
     // cb(null, __basedir + "/assets/uploads/");
     // for vercel
-    cb(null, __basedir + "/assets/uploads/");
+    cb(null, file_url );
   },
   filename: (req, file, cb) => {
     const extArray = file.mimetype.split("/");
@@ -16,8 +16,8 @@ const storage = multer.diskStorage({
 });
 
 //"singlefile" is an element name in the multipart/form-data
-// const uploadFile = multer({ storage: storage }).single("singlefile");
-const uploadFile = multer({  dest: "uploads/" }).single("singlefile");
+const uploadFile = multer({ storage: storage }).single("singlefile");
+// const uploadFile = multer({  dest: "uploads/" }).single("singlefile");
 
 //util.promisify() makes the exported middleware object can be used with async-await
 const uploadFileMiddleware = util.promisify(uploadFile);

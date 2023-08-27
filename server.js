@@ -5,7 +5,7 @@ const app = express();
 
 global.__basedir = __dirname;
 //for vercel only
-global.file_domain = "https://manage-account-api.vercel.app/api/file";
+global.file_url = "https://drive.google.com/drive/folders/12Krqh3Wd82OwWYNXSWWpQROiI5h0M_lJ?usp=sharing";
 var corsOptions = {
   origin: "*",
 };
