@@ -22,7 +22,7 @@ const getListFiles = (req, res) => {
   // for local
   // const directoryPath = __basedir + "/assets/uploads/";
   // for vercel
-  const directoryPath = __basedir + "/app/assets/uploads/";
+  const directoryPath = __basedir + "/assets/uploads/";
   fs.readdir(directoryPath, function (err, files) {
     if (err) {
       res.status(500).send({
@@ -45,7 +45,7 @@ const download = (req, res) => {
   // for local
   // const directoryPath = __basedir + "/assets/uploads/";
   // for vercel
-  const directoryPath = __basedir + "/app/assets/uploads/";
+  const directoryPath = __basedir + "./assets/uploads/";
   
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
