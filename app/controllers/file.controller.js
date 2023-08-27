@@ -45,7 +45,7 @@ const download = (req, res) => {
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
       res.status(500).send({
-        message: "Could not download the file. " + err,
+        message: __basedir +" Could not download the file. " + err,
       });
     }
   });
