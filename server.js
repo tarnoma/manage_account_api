@@ -5,14 +5,14 @@ const app = express();
 
 global.__basedir = __dirname;
 //for vercel only
-global.file_url = "https://drive.google.com/drive/folders/12Krqh3Wd82OwWYNXSWWpQROiI5h0M_lJ?usp=sharing";
+// global.file_url = "https://drive.google.com/drive/folders/12Krqh3Wd82OwWYNXSWWpQROiI5h0M_lJ?usp=sharing";
 var corsOptions = {
   origin: "*",
 };
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("assets"));
+app.use(express.static(__basedir+"assets/uploads/"));
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Manage Accounts API." });
