@@ -19,7 +19,10 @@ const upload = async (req, res) => {
 };
 
 const getListFiles = (req, res) => {
-  const directoryPath = __basedir + "/assets/uploads/";
+    //for local
+  // const directoryPath = __basedir + "/assets/uploads/";
+  //for vercel
+  const directoryPath = __basedir + "/app/assets/uploads/";
   // console.log("lis:" + directoryPath)
   fs.readdir(directoryPath, function (err, files) {
     if (err) {
@@ -41,7 +44,10 @@ const getListFiles = (req, res) => {
 const download = (req, res) => {
   const fileName = req.params.name;
   // console.log("faaaaaa:" + fileName)
-  const directoryPath = __basedir + "/assets/uploads/";
+  //for local
+  // const directoryPath = __basedir + "/assets/uploads/";
+  //for vercel
+  const directoryPath = __basedir + "/app/assets/uploads/";
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
       res.status(500).send({
