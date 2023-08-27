@@ -45,12 +45,12 @@ const download = (req, res) => {
   // for local
   // const directoryPath = __basedir + "/assets/uploads/";
   // for vercel
-  const directoryPath = __basedir + "./assets/uploads/";
+  const directoryPath = __basedir + "/assets/uploads/";
   
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
       res.status(500).send({
-        message: " Could not download the file. " + err,
+        message: directoryPath + fileName + " Could not download the file. " + err,
       });
     }
   });
