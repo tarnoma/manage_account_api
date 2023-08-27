@@ -12,7 +12,7 @@ var corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__basedir+"assets/uploads/"));
+app.use(express.static("/var/task/assets/uploads/"));
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Manage Accounts API." });
