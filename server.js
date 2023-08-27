@@ -4,6 +4,8 @@ const cors = require("cors");
 const app = express();
 
 global.__basedir = __dirname;
+//for vercel only
+global.file_domain = "https://manage-account-api.vercel.app/api/file";
 var corsOptions = {
   origin: "*",
 };

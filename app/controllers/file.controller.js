@@ -44,8 +44,8 @@ const download = (req, res) => {
   const fileName = req.params.name;
   // for local
   // const directoryPath = __basedir + "/assets/uploads/";
-  // for vercel
-  const directoryPath = __basedir + "/assets/uploads/";
+  // for vercel, due to it is serverless
+  const directoryPath = file_domain + "/assets/uploads/";
   
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
