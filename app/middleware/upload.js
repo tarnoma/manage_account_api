@@ -5,7 +5,7 @@ const storage = multer.diskStorage({
     // for local
     // cb(null, __basedir + "/assets/uploads/");
     // for vercel
-    cb(null, file_url );
+    cb(null, __basedir + "/assets/uploads/" );
   },
   filename: (req, file, cb) => {
     const extArray = file.mimetype.split("/");
